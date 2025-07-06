@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="UgPodborAuto - подбор и доставка автомобилей из-за границы. Бесплатная консультация и расчет растаможки.">
+    <meta name="description" content="UgPodborAuto - подбор и доставка автомобилей из-за границы. Бесплатная консультация и расчет растаможки. Ваш надежный партнер.">
+    <meta name="keywords" content="UgPodborAuto, авто из-за границы, пригнать авто, растаможка авто, купить авто, автомобиль под ключ, Европа, США, Корея, ОАЭ, автоподбор">
     <title>UgPodborAuto - Автомобили из-за границы под ключ</title>
 
     <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/images/icons/favicon.ico" sizes="any">
+
+    <link rel="manifest" href="/manifest.json">
 
     <style>
-        /* Критический CSS для быстрого отображения основных элементов */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
             margin: 0;
@@ -34,6 +37,7 @@
         .cta-button:hover {
             background: #e0b020; /* Темнее при наведении */
             transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
     <link rel="stylesheet" href="style.css">
@@ -70,7 +74,7 @@
                 </svg>
             </h1>
             <h2>Ваш надежный партнер в покупке авто из-за границы</h2>
-            <p>Мы подберем, проверим и доставим автомобиль вашей мечты с полным документальным сопровождением.</p>
+            <p>Мы подберем, проверим и доставим автомобиль вашей мечты с полным документальным сопровождением. Откройте для себя мир высококачественных автомобилей по выгодным ценам!</p>
             <a href="https://t.me/UgPodborA" class="cta-button">Бесплатная консультация в Telegram</a>
         </div>
         <video autoplay muted loop playsinline id="hero-video" class="hero-video">
@@ -81,22 +85,22 @@
         <div class="hero-image-fallback"></div>
     </section>
 
-    <section id="calculator" class="calculator-section parallax-effect">
+    <section id="calculator" class="calculator-section parallax-effect" data-parallax-speed="0.15">
         <div class="container">
             <h2>Калькулятор растаможки</h2>
-            <p>Узнайте ориентировочную стоимость растаможки вашего будущего автомобиля.</p>
+            <p>Узнайте ориентировочную стоимость растаможки вашего будущего автомобиля. Это поможет вам спланировать бюджет.</p>
             <form id="customs-calculator-form">
                 <div class="form-group">
-                    <label for="car-price">Цена авто в USD:</label>
-                    <input type="number" id="car-price" min="1000" placeholder="Например, 25000" required>
+                    <label for="car-price">Цена авто в USD ($):</label>
+                    <input type="number" id="car-price" min="1000" placeholder="Например, 25000" required aria-label="Цена автомобиля в долларах США">
                 </div>
                 <div class="form-group">
                     <label for="engine-volume">Объем двигателя (куб. см):</label>
-                    <input type="number" id="engine-volume" min="500" placeholder="Например, 2000" required>
+                    <input type="number" id="engine-volume" min="500" placeholder="Например, 2000" required aria-label="Объем двигателя в кубических сантиметрах">
                 </div>
                 <div class="form-group">
                     <label for="car-age">Возраст авто (лет):</label>
-                    <select id="car-age" required>
+                    <select id="car-age" required aria-label="Возраст автомобиля">
                         <option value="">Выберите возраст</option>
                         <option value="0-3">До 3 лет</option>
                         <option value="3-5">От 3 до 5 лет</option>
@@ -105,7 +109,7 @@
                 </div>
                 <div class="form-group">
                     <label for="fuel-type">Тип топлива:</label>
-                    <select id="fuel-type" required>
+                    <select id="fuel-type" required aria-label="Тип топлива">
                         <option value="">Выберите тип топлива</option>
                         <option value="petrol">Бензин</option>
                         <option value="diesel">Дизель</option>
@@ -113,109 +117,124 @@
                         <option value="hybrid">Гибрид</option>
                     </select>
                 </div>
-                <button type="submit" class="cta-button">Рассчитать</button>
+                <button type="submit" class="cta-button">Рассчитать стоимость</button>
             </form>
-            <div id="calculation-result" class="calculation-result">
+            <div id="calculation-result" class="calculation-result" aria-live="polite">
                 </div>
             <p class="disclaimer">
-                <small>Обратите внимание: данный расчет является ориентировочным. Для точной стоимости свяжитесь с нами.</small>
+                <small>Обратите внимание: данный расчет является ориентировочным и не является публичной офертой. Для получения точной и финальной стоимости растаможки, пожалуйста, свяжитесь с нашим специалистом.</small>
             </p>
-            <a href="https://t.me/UgPodborA" class="cta-button secondary-cta">Получить точный расчет</a>
+            <a href="https://t.me/UgPodborA" class="cta-button secondary-cta">Получить точный расчет у специалиста</a>
         </div>
     </section>
 
-    <section id="gallery" class="gallery-section parallax-effect">
+    <section id="gallery" class="gallery-section parallax-effect" data-parallax-speed="0.1">
         <div class="container">
             <h2>Примеры подобранных автомобилей</h2>
+            <p>Посмотрите, какие автомобили уже нашли своих владельцев благодаря UgPodborAuto.</p>
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <picture>
                         <source srcset="assets/images/gallery/car1.avif" type="image/avif">
                         <source srcset="assets/images/gallery/car1.webp" type="image/webp">
-                        <img src="assets/images/gallery/car1.jpg" alt="Пример автомобиля 1" loading="lazy">
+                        <img src="assets/images/gallery/car1.jpg" alt="BMW X5 из Германии" loading="lazy">
                     </picture>
                     <h3>BMW X5</h3>
-                    <p>Из Германии</p>
+                    <p>Из Германии, 2022 год, Пробег: 30 тыс. км</p>
                 </div>
                 <div class="gallery-item">
                     <picture>
                         <source srcset="assets/images/gallery/car2.avif" type="image/avif">
                         <source srcset="assets/images/gallery/car2.webp" type="image/webp">
-                        <img src="assets/images/gallery/car2.jpg" alt="Пример автомобиля 2" loading="lazy">
+                        <img src="assets/images/gallery/car2.jpg" alt="Mercedes-Benz E-Class из США" loading="lazy">
                     </picture>
                     <h3>Mercedes-Benz E-Class</h3>
-                    <p>Из США</p>
+                    <p>Из США, 2021 год, Пробег: 45 тыс. км</p>
                 </div>
                 <div class="gallery-item">
                     <picture>
                         <source srcset="assets/images/gallery/car3.avif" type="image/avif">
                         <source srcset="assets/images/gallery/car3.webp" type="image/webp">
-                        <img src="assets/images/gallery/car3.jpg" alt="Пример автомобиля 3" loading="lazy">
+                        <img src="assets/images/gallery/car3.jpg" alt="Audi A6 из ОАЭ" loading="lazy">
                     </picture>
                     <h3>Audi A6</h3>
-                    <p>Из ОАЭ</p>
+                    <p>Из ОАЭ, 2023 год, Пробег: 15 тыс. км</p>
                 </div>
                 <div class="gallery-item">
                     <picture>
                         <source srcset="assets/images/gallery/car4.avif" type="image/avif">
                         <source srcset="assets/images/gallery/car4.webp" type="image/webp">
-                        <img src="assets/images/gallery/car4.jpg" alt="Пример автомобиля 4" loading="lazy">
+                        <img src="assets/images/gallery/car4.jpg" alt="Toyota Camry из Южной Кореи" loading="lazy">
                     </picture>
                     <h3>Toyota Camry</h3>
-                    <p>Из Южной Кореи</p>
+                    <p>Из Южной Кореи, 2020 год, Пробег: 60 тыс. км</p>
                 </div>
             </div>
-            <a href="https://t.me/UgPodborA" class="cta-button secondary-cta">Посмотреть больше примеров</a>
+            <a href="https://t.me/UgPodborA" class="cta-button secondary-cta">Посмотреть больше примеров в Telegram</a>
         </div>
     </section>
 
     <section id="advantages" class="advantages-section">
         <div class="container">
-            <h2>Почему UgPodborAuto?</h2>
+            <h2>Почему выбирают UgPodborAuto?</h2>
+            <p>Наши преимущества, которые гарантируют вашу уверенность и выгоду.</p>
             <div class="advantages-grid">
                 <div class="advantage-item">
-                    <i class="icon-check"></i>
+                    <svg class="advantage-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                     <h3>Полное сопровождение</h3>
-                    <p>От подбора до регистрации автомобиля.</p>
+                    <p>От подбора и проверки до таможенного оформления и доставки прямо к вашим дверям.</p>
                 </div>
                 <div class="advantage-item">
-                    <i class="icon-shield"></i>
-                    <h3>Гарантия качества</h3>
-                    <p>Проверка авто перед покупкой по 100+ пунктам.</p>
+                    <svg class="advantage-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <h3>Прозрачность и гарантии</h3>
+                    <p>Полная история авто, детальный осмотр и юридическая чистота каждой сделки.</p>
                 </div>
                 <div class="advantage-item">
-                    <i class="icon-globe"></i>
-                    <h3>Широкая география</h3>
-                    <p>Привозим авто из Европы, США, ОАЭ, Кореи.</p>
+                    <svg class="advantage-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                    <h3>Широкий выбор</h3>
+                    <p>Доступ к авторынкам Европы, США, ОАЭ и Южной Кореи. Любая марка и модель.</p>
                 </div>
                 <div class="advantage-item">
-                    <i class="icon-wallet"></i>
-                    <h3>Выгодные цены</h3>
-                    <p>Помогаем сэкономить до 30% от рыночной стоимости.</p>
+                    <svg class="advantage-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 14V10c0-.88-.04-1.74-.21-2.58A2 2 0 0 0 14.82 6H9.18a2 2 0 0 0-1.97 1.42A10.53 10.03 0 0 1 7 10v4"></path><path d="M2.5 10c.83 2.1 2.34 4.07 4.5 5.5"></path><path d="M21.5 10c-.83 2.1-2.34 4.07-4.5 5.5"></path><path d="M12 16v.01"></path><path d="M12 12V6"></path><path d="M12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2z"></path></svg>
+                    <h3>Экономия до 30%</h3>
+                    <p>Благодаря оптимизации логистики и таможенных процессов, вы экономите значительную сумму.</p>
                 </div>
             </div>
-            <a href="https://t.me/UgPodborA" class="cta-button secondary-cta">Узнать больше</a>
+            <a href="https://t.me/UgPodborA" class="cta-button secondary-cta">Узнать больше о наших услугах</a>
         </div>
     </section>
 
-    <section id="contact" class="contact-section parallax-effect">
+    <section id="contact" class="contact-section parallax-effect" data-parallax-speed="0.2">
         <div class="container">
-            <h2>Остались вопросы?</h2>
-            <p>Свяжитесь с нами для бесплатной консультации.</p>
-            <a href="https://t.me/UgPodborA" class="cta-button">Написать в Telegram</a>
+            <h2>Готовы начать поиск вашего идеального авто?</h2>
+            <p>Не откладывайте мечту! Свяжитесь с нами прямо сейчас для бесплатной консультации и первого шага к покупке.</p>
+            <a href="https://t.me/UgPodborA" class="cta-button">Связаться в Telegram</a>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 UgPodborAuto. Все права защищены.</p>
+            <p>&copy; 2025 UgPodborAuto. Все права защищены. <br>ИНН: XXXX | ОГРН: YYYY (ВЛАДЕЛЕЦ: Добавьте свои данные)</p>
             <div class="footer-links">
-                <a href="https://t.me/UgPodborA">Telegram</a>
-                <a href="#privacy-policy">Политика конфиденциальности</a> </div>
+                <a href="https://t.me/UgPodborA" target="_blank" rel="noopener noreferrer">Telegram</a>
+                <a href="#privacy-policy">Политика конфиденциальности</a> <a href="#terms-of-service">Условия использования</a> </div>
         </div>
     </footer>
 
     <script src="script.js" defer></script>
 
-    </body>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker зарегистрирован: ', registration.scope);
+                    })
+                    .catch(err => {
+                        console.log('Ошибка регистрации Service Worker: ', err);
+                    });
+            });
+        }
+    </script>
+</body>
 </html>
