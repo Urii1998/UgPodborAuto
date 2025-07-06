@@ -1,20 +1,21 @@
 {
-  "name": "UgPodborAuto",
-  "short_name": "UgPodbor",
-  "start_url": "/index.html",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#f9ca24",
-  "icons": [
-    {
-      "src": "assets/images/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/images/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+    "name": "UgPodborAuto",
+    "short_name": "UgPodborAuto",
+    "description": "Подбор и доставка автомобилей из-за границы",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f8f8f8",
+    "theme_color": "#f9ca24",
+    "icons": [
+        {
+            "src": "assets/images/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/images/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
 }
