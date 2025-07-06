@@ -1,0 +1,17 @@
+/* Mobile-first стили */
+body { font-size:16px; line-height:1.5; background:#fff; color:#333; }
+#hero { position:relative; height:100vh; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; }
+#bg-video { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1; }
+.cta-button { /* см. inline */ }
+#calculator { padding:2rem; background:#f4f4f4; }
+#calc-form label { display:block; margin-bottom:1rem; }
+#calc-form button { background:#f9ca24; border:none; padding:.5rem 1rem; cursor:pointer; }
+#gallery { padding:2rem 1rem; }
+.gallery-grid { display:grid; grid-template-columns:1fr; gap:1rem; }
+@media(min-width:600px) { .gallery-grid { grid-template-columns: repeat(2,1fr); } }
+@media(min-width:900px) { .gallery-grid { grid-template-columns: repeat(3,1fr); } }
+.card { perspective:1000px; }
+.card-inner { transform-style: preserve-3d; transition: transform .6s; }
+.card:hover .card-inner { transform: rotateY(15deg) rotateX(5deg); }
+#logo { position:fixed; top:1rem; left:1rem; width:100px; transition: transform .3s; }
+.scrolled #logo { transform: scale(.8) rotate(10deg); }
