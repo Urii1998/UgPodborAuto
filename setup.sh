@@ -10,6 +10,26 @@ cat > index.html << 'EOF'
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+#!/usr/bin/env bash
+
+# Создаем структуру
+mkdir -p assets/{css,js,video,images,fonts}
+
+# index.html
+cat > index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UgPodborAuto — подбор и продажа авто из-за >
+  <title>UgPodborAuto - авто из-за границы</title>
+  <!-- Критический inline CSS -->
+  <style>
+    body { margin:0; font-family: sans-serif; }
+    .cta-button { background:#f9ca24; color:#000; padding:1rem 2rem; text-decor>
+    .cta-button:hover { transform: scale(1.05); }
+  </style>
   <meta name="description" content="UgPodborAuto — подбор и продажа авто из-за границы с доставкой и растаможкой">
   <title>UgPodborAuto - авто из-за границы</title>
   <!-- Критический inline CSS -->

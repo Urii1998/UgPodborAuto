@@ -1,14 +1,16 @@
-self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open('ug-auto-cache').then(cache => {
-      return cache.addAll(['/', '/index.html', '/style.css', '/script.js']);
-    })
-  );
+const CACHE_NAME = 'ugpodborauto-v1';
+const ASSETS = [
+  '/index.html',
+  '/style.css',
+  '/script.js',
+  '/manifest.json'
+  // добавьте пути к статике: видео, изображения, шрифты
+];
+self.addEventListener('install', evt => {
+  evt.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS)));
 });
-self.addEventListener('fetch', e => {
-  e.respondWith(
-    caches.match(e.request).then(response => {
-      return response || fetch(e.request);
-    })
+self.addEventListener('fetch', evt => {
+  evt.respondWith(
+    fetch(evt.request).catch(() => caches.match(evt.request).then(r => r || caches.match('/index.html')))
   );
 });
