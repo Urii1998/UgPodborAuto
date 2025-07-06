@@ -1,20 +1,20 @@
 {
   "name": "UgPodborAuto",
-  "short_name": "UgPodbor",
-  "start_url": "/index.html",
+  "short_name": "UgAuto",
+  "start_url": ".",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#f9ca24",
+  "background_color": "#000000",
+  "theme_color": "#000000",
   "icons": [
     {
-      "src": "assets/images/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "assets/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     },
     {
-      "src": "assets/images/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "assets/icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ]
 }
